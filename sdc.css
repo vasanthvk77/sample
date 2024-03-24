@@ -1,0 +1,157 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/**********************************************logo***************************************************/
+.home_logo
+{
+  width:100%;
+  height:110px;
+ 
+}
+/*********************************************slide ***********************************************/
+.slidehead
+{
+  z-index: 2;
+  position: absolute;
+  top: 50%;
+  left:30%;
+  color: rgb(7, 11, 77);
+  font-size: 70px;
+}
+@media (max-width:1200px){
+  .slidehead{
+    font-size: 60px;
+    left:27%;
+  }
+  }
+  @media (max-width:750px){
+    .slidehead{
+      font-size: 40px;
+      left:10%;
+    }
+    }
+    @media (max-width:576px){
+      .slidehead{
+        font-size: 40px;
+        left:10%;
+      }
+      }
+
+/***************************************************assocon**************************************************/
+.assorow
+{
+    height:50px !important;
+    align-items: center;
+   /* background: linear-gradient(rgba(0,0,0,.1),rgba(0,0,0,.2)),url('');*/
+   background-color: #292E94;
+    width:100%;
+    
+    font-family: "Dosis", sans-serif;
+    margin-top:26px;
+   border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.row1h1
+{
+    color: rgb(255, 255, 255);
+    font-size: 30px;
+
+}
+
+/********************************************************logo*****************************************/
+@media (max-width:770px){
+  .home_logo{
+      width: 90%;
+      height: 80px;
+      margin-left:-30px;
+  }
+}
+
+@media (max-width:578px){
+  .home_logo{
+      width: 80%;
+      height: 65px;
+      margin-left: -20px;
+  }
+}
+@media (max-width:520px){
+  .home_logo{
+      width: 60%;
+      height: 70px;
+      margin-left: -20px;
+  }
+}
+@media (max-width:420px){
+  .home_logo{
+      width:60%;
+      height:50px;
+      margin-left: -24px;
+  }
+}
+/***************************************************moving brands**************************************************/
+
+
+@keyframes slide {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-100%);
+    }
+  }
+  
+  .logos {
+    
+    z-index: -1;
+    overflow: hidden;
+    padding: 60px 0;
+    background: white;
+    white-space: nowrap;
+    position: relative;
+    width:auto;
+    height:450px;
+    margin-top: -130px;
+    
+   
+  }
+
+  .logos:before,
+  .logos:after {
+    position: absolute;
+    top: 0;
+    width: 150px;
+    height:100%;
+    content: "";
+    z-index: 2;
+  
+    
+  }
+  
+  .logos:before {
+    left: 0;
+    background: linear-gradient(to left, rgba(255, 255, 255, 0), white);
+  }
+  
+  .logos:after {
+    right: 0;
+    background: linear-gradient(to right, rgba(255, 255, 255, 0), white);
+  }
+  
+  .logos-slide:hover img {
+    animation-play-state: paused;
+  }
+  
+  .logos-slide {
+    display: inline-block;
+    animation:15s slide infinite linear;
+  }
+  
+  .logos-slide img {
+    
+    margin: 0 40px;
+  }
