@@ -88,18 +88,12 @@
 }
 @media (max-width:420px){
   .home_logo{
-      width:60%;
-      height:50px;
-      margin-left: -24px;
+      width:auto;
+      height:auto;
+      margin-left:0px;
   }
 }
-@media (max-width:350px){
-  .home_logo{
-      width:40%;
-      height:40px;
-      margin-left:-18px;
-  }
-}
+
 /***************************************************moving brands**************************************************/
 
 
