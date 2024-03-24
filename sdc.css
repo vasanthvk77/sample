@@ -93,6 +93,13 @@
       margin-left: -24px;
   }
 }
+@media (max-width:350px){
+  .home_logo{
+      width:40%;
+      height:40px;
+      margin-left:-18px;
+  }
+}
 /***************************************************moving brands**************************************************/
 
 
