@@ -1,0 +1,1242 @@
+{
+  "DB_Connection": {
+    "MySQL": {
+      "DB_Vendor_Name": "MySQL",
+      "JDBC_URL_Template": "jdbc:mysql://{host}:{port}/{database}",
+      "Connected_By_Options": ["Host-based connection", "JDBC URL connection"],
+      "Default_Connected_By": "Host-based connection",
+      "Fields": [
+        {
+          "name": "Name",
+          "label": "Connection Name",
+          "type": "text",
+          "required": true,
+          "placeholder": "Enter connection name",
+          "order": 1
+        },
+        {
+          "name": "Host",
+          "label": "Host",
+          "type": "text",
+          "required": true,
+          "placeholder": "127.0.0.1",
+          "disabled_when": "JDBC URL connection",
+          "order": 2
+        },
+        {
+          "name": "Port",
+          "label": "Port",
+          "type": "number",
+          "required": true,
+          "placeholder": "3306",
+          "disabled_when": "JDBC URL connection",
+          "order": 3
+        },
+        {
+          "name": "Database",
+          "label": "Database",
+          "type": "text",
+          "required": true,
+          "placeholder": "Database name",
+          "disabled_when": "JDBC URL connection",
+          "order": 4
+        },
+        {
+          "name": "Schema",
+          "label": "Schema",
+          "type": "text",
+          "required": false,
+          "placeholder": "Schema (optional)",
+          "order": 5
+        },
+        {
+          "name": "Authentication_Type",
+          "label": "Authentication Type",
+          "type": "dropdown",
+          "required": true,
+          "options": ["MYSQL Native Authentication"],
+          "default": "MYSQL Native Authentication",
+          "order": 6
+        },
+        {
+          "name": "Username",
+          "label": "Username",
+          "type": "text",
+          "required": true,
+          "placeholder": "Username",
+          "order": 7
+        },
+        {
+          "name": "Password",
+          "label": "Password",
+          "type": "password",
+          "required": false,
+          "placeholder": "Enter password",
+          "order": 8
+        }
+      ],
+      "SSL_Fields": [
+        {
+          "name": "SSL_Mode",
+          "label": "SSL Mode",
+          "type": "dropdown",
+          "required": false,
+          "options": ["require", "VERIFY_IDENTITY", "verify-ca", "prefer"],
+          "default": "require"
+        },
+        {
+          "name": "ssl_ca",
+          "label": "CA Certificate",
+          "type": "file",
+          "required": false,
+          "placeholder": "Select CA certificate file"
+        },
+        {
+          "name": "ssl_cert",
+          "label": "Client Certificate",
+          "type": "file",
+          "required": false,
+          "placeholder": "Select client certificate file"
+        },
+        {
+          "name": "ssl_key",
+          "label": "Client Key",
+          "type": "file",
+          "required": false,
+          "placeholder": "Select client key file"
+        }
+      ]
+    },
+    "SQL Server": {
+      "DB_Vendor_Name": "SQL Server",
+      "JDBC_URL_Template": "jdbc:sqlserver://{host}:{port};databaseName={database}",
+      "Connected_By_Options": ["Host-based connection", "JDBC URL connection"],
+      "Default_Connected_By": "Host-based connection",
+      "Fields": [
+        {
+          "name": "Name",
+          "label": "Connection Name",
+          "type": "text",
+          "required": true,
+          "placeholder": "Enter connection name",
+          "order": 1
+        },
+        {
+          "name": "Host",
+          "label": "Host",
+          "type": "text",
+          "required": true,
+          "placeholder": "127.0.0.1",
+          "disabled_when": "JDBC URL connection",
+          "order": 2
+        },
+        {
+          "name": "Port",
+          "label": "Port",
+          "type": "number",
+          "required": true,
+          "placeholder": "1433",
+          "disabled_when": "JDBC URL connection",
+          "order": 3
+        },
+        {
+          "name": "Database",
+          "label": "Database",
+          "type": "text",
+          "required": true,
+          "placeholder": "Database name",
+          "disabled_when": "JDBC URL connection",
+          "order": 4
+        },
+        {
+          "name": "Schema",
+          "label": "Schema",
+          "type": "text",
+          "required": false,
+          "placeholder": "dbo",
+          "order": 5
+        },
+        {
+          "name": "Authentication_Type",
+          "label": "Authentication Type",
+          "type": "dropdown",
+          "required": true,
+          "options": ["SQL Server Native Authentication", "Windows Authentication"],
+          "default": "SQL Server Native Authentication",
+          "order": 6
+        },
+        {
+          "name": "Username",
+          "label": "Username",
+          "type": "text",
+          "required": true,
+          "placeholder": "Username",
+          "order": 7
+        },
+        {
+          "name": "Password",
+          "label": "Password",
+          "type": "password",
+          "required": false,
+          "placeholder": "Enter password",
+          "order": 8
+        }
+      ],
+      "SSL_Fields": [
+        {
+          "name": "SSL_Mode",
+          "label": "SSL Mode",
+          "type": "readonly",
+          "value": "Enabled"
+        },
+        {
+          "name": "Encrypt",
+          "label": "Encrypt",
+          "type": "readonly",
+          "value": "ENABLED"
+        },
+        {
+          "name": "TrustServerCertificate",
+          "label": "Trust Server Certificate",
+          "type": "readonly",
+          "value": "True"
+        }
+      ]
+    },
+    "Oracle": {
+      "DB_Vendor_Name": "Oracle",
+      "JDBC_URL_Template": "jdbc:oracle:thin:@//{host}:{port}/{service_name}",
+      "Connected_By_Options": ["Host-based connection", "JDBC URL connection"],
+      "Default_Connected_By": "Host-based connection",
+      "Fields": [
+        {
+          "name": "Name",
+          "label": "Connection Name",
+          "type": "text",
+          "required": true,
+          "placeholder": "Enter connection name",
+          "order": 1
+        },
+        {
+          "name": "Host",
+          "label": "Host",
+          "type": "text",
+          "required": true,
+          "placeholder": "127.0.0.1",
+          "disabled_when": "JDBC URL connection",
+          "order": 2
+        },
+        {
+          "name": "Port",
+          "label": "Port",
+          "type": "number",
+          "required": true,
+          "placeholder": "1521",
+          "disabled_when": "JDBC URL connection",
+          "order": 3
+        },
+        {
+          "name": "Connection_Type",
+          "label": "Connection Type",
+          "type": "dropdown",
+          "required": true,
+          "options": ["SID", "Service_Name"],
+          "default": "SID",
+          "order": 4
+        },
+        {
+          "name": "Database",
+          "label": "SID / Service Name",
+          "type": "text",
+          "required": true,
+          "placeholder": "ORCL",
+          "disabled_when": "JDBC URL connection",
+          "dynamic_label": true,
+          "order": 5
+        },
+        {
+          "name": "Schema",
+          "label": "Schema",
+          "type": "text",
+          "required": false,
+          "placeholder": "Schema (optional)",
+          "order": 6
+        },
+        {
+          "name": "Authentication_Type",
+          "label": "Authentication Type",
+          "type": "dropdown",
+          "required": true,
+          "options": ["Oracle Native Authentication", "OS Authentication"],
+          "default": "Oracle Native Authentication",
+          "order": 7
+        },
+        {
+          "name": "Username",
+          "label": "Username",
+          "type": "text",
+          "required": true,
+          "placeholder": "Username",
+          "order": 8
+        },
+        {
+          "name": "Password",
+          "label": "Password",
+          "type": "password",
+          "required": false,
+          "placeholder": "Enter password",
+          "order": 9
+        }
+      ],
+      "SSL_Fields": [
+        {
+          "name": "SSL",
+          "label": "SSL",
+          "type": "readonly",
+          "value": "True"
+        },
+        {
+          "name": "SSL_Verify",
+          "label": "SSL Verify",
+          "type": "readonly",
+          "value": "ENABLED"
+        },
+        {
+          "name": "Trust_Store_CA_File_Path",
+          "label": "Trust Store (CA File) Path",
+          "type": "file",
+          "required": false,
+          "placeholder": "Select CA file path"
+        }
+      ]
+    },
+    "PostgreSQL": {
+      "DB_Vendor_Name": "PostgreSQL",
+      "JDBC_URL_Template": "jdbc:postgresql://{host}:{port}/{database}",
+      "Connected_By_Options": ["Host-based connection", "JDBC URL connection"],
+      "Default_Connected_By": "Host-based connection",
+      "Fields": [
+        {
+          "name": "Name",
+          "label": "Connection Name",
+          "type": "text",
+          "required": true,
+          "placeholder": "Enter connection name",
+          "order": 1
+        },
+        {
+          "name": "Host",
+          "label": "Host",
+          "type": "text",
+          "required": true,
+          "placeholder": "127.0.0.1",
+          "disabled_when": "JDBC URL connection",
+          "order": 2
+        },
+        {
+          "name": "Port",
+          "label": "Port",
+          "type": "number",
+          "required": true,
+          "placeholder": "5432",
+          "disabled_when": "JDBC URL connection",
+          "order": 3
+        },
+        {
+          "name": "Database",
+          "label": "Database",
+          "type": "text",
+          "required": true,
+          "placeholder": "Database name",
+          "disabled_when": "JDBC URL connection",
+          "order": 4
+        },
+        {
+          "name": "Schema",
+          "label": "Schema",
+          "type": "text",
+          "required": false,
+          "placeholder": "public",
+          "order": 5
+        },
+        {
+          "name": "Authentication_Type",
+          "label": "Authentication Type",
+          "type": "dropdown",
+          "required": true,
+          "options": ["PostgreSQL Native Authentication"],
+          "default": "PostgreSQL Native Authentication",
+          "order": 6
+        },
+        {
+          "name": "Username",
+          "label": "Username",
+          "type": "text",
+          "required": true,
+          "placeholder": "Username",
+          "order": 7
+        },
+        {
+          "name": "Password",
+          "label": "Password",
+          "type": "password",
+          "required": false,
+          "placeholder": "Enter password",
+          "order": 8
+        }
+      ],
+      "SSL_Fields": [
+        {
+          "name": "SSL_Mode",
+          "label": "SSL Mode",
+          "type": "dropdown",
+          "required": false,
+          "options": ["require", "verify-full", "verify-ca", "allow", "prefer"],
+          "default": "require"
+        },
+        {
+          "name": "sslrootcert",
+          "label": "CA Certificate",
+          "type": "file",
+          "required": false,
+          "placeholder": "Select CA certificate file"
+        },
+        {
+          "name": "sslcert",
+          "label": "Client Certificate",
+          "type": "file",
+          "required": false,
+          "placeholder": "Select client certificate file"
+        },
+        {
+          "name": "sslkey",
+          "label": "Client Key",
+          "type": "file",
+          "required": false,
+          "placeholder": "Select client key file"
+        }
+      ]
+    },
+    "Vertica": {
+      "DB_Vendor_Name": "Vertica",
+      "JDBC_URL_Template": "jdbc:vertica://{host}:{port}/{database}",
+      "Connected_By_Options": ["Host-based connection", "JDBC URL connection"],
+      "Default_Connected_By": "Host-based connection",
+      "Fields": [
+        {
+          "name": "Name",
+          "label": "Connection Name",
+          "type": "text",
+          "required": true,
+          "placeholder": "Enter connection name",
+          "order": 1
+        },
+        {
+          "name": "Host",
+          "label": "Host",
+          "type": "text",
+          "required": true,
+          "placeholder": "127.0.0.1",
+          "disabled_when": "JDBC URL connection",
+          "order": 2
+        },
+        {
+          "name": "Port",
+          "label": "Port",
+          "type": "number",
+          "required": true,
+          "placeholder": "5433",
+          "disabled_when": "JDBC URL connection",
+          "order": 3
+        },
+        {
+          "name": "Database",
+          "label": "Database",
+          "type": "text",
+          "required": true,
+          "placeholder": "Database name",
+          "disabled_when": "JDBC URL connection",
+          "order": 4
+        },
+        {
+          "name": "Schema",
+          "label": "Schema",
+          "type": "text",
+          "required": false,
+          "placeholder": "public",
+          "order": 5
+        },
+        {
+          "name": "Authentication_Type",
+          "label": "Authentication Type",
+          "type": "dropdown",
+          "required": true,
+          "options": ["Vertica Native Authentication"],
+          "default": "Vertica Native Authentication",
+          "order": 6
+        },
+        {
+          "name": "Username",
+          "label": "Username",
+          "type": "text",
+          "required": true,
+          "placeholder": "Username",
+          "order": 7
+        },
+        {
+          "name": "Password",
+          "label": "Password",
+          "type": "password",
+          "required": false,
+          "placeholder": "Enter password",
+          "order": 8
+        }
+      ],
+      "SSL_Fields": [
+        {
+          "name": "SSL_Mode",
+          "label": "SSL Mode",
+          "type": "dropdown",
+          "required": false,
+          "options": ["verify-full", "Mutual Mode"],
+          "default": "verify-full"
+        },
+        {
+          "name": "SSLRootCert",
+          "label": "CA Certificate",
+          "type": "file",
+          "required": false,
+          "placeholder": "Select CA certificate file"
+        },
+        {
+          "name": "SSLCert",
+          "label": "Client Certificate",
+          "type": "file",
+          "required": false,
+          "placeholder": "Select client certificate file"
+        },
+        {
+          "name": "SSLKey",
+          "label": "Client Key",
+          "type": "file",
+          "required": false,
+          "placeholder": "Select client key file"
+        }
+      ]
+    },
+    "SQLite": {
+      "DB_Vendor_Name": "SQLite",
+      "JDBC_URL_Template": "jdbc:sqlite:{path}",
+      "Connected_By_Options": ["File-based connection", "JDBC URL connection"],
+      "Default_Connected_By": "File-based connection",
+      "Fields": [
+        {
+          "name": "Name",
+          "label": "Connection Name",
+          "type": "text",
+          "required": true,
+          "placeholder": "Enter connection name",
+          "order": 1
+        },
+        {
+          "name": "Path",
+          "label": "Database File Path",
+          "type": "file",
+          "required": true,
+          "placeholder": "Select database file",
+          "order": 2
+        },
+        {
+          "name": "Schema",
+          "label": "Schema",
+          "type": "text",
+          "required": false,
+          "placeholder": "main",
+          "order": 3
+        }
+      ],
+      "SSL_Fields": []
+    },
+    "DuckDB": {
+      "DB_Vendor_Name": "DuckDB",
+      "JDBC_URL_Template": "jdbc:duckdb:{path}",
+      "Connected_By_Options": ["File-based connection", "JDBC URL connection"],
+      "Default_Connected_By": "File-based connection",
+      "Fields": [
+        {
+          "name": "Name",
+          "label": "Connection Name",
+          "type": "text",
+          "required": true,
+          "placeholder": "Enter connection name",
+          "order": 1
+        },
+        {
+          "name": "Path",
+          "label": "Database File Path",
+          "type": "file",
+          "required": true,
+          "placeholder": "Select database file",
+          "order": 2
+        },
+        {
+          "name": "Schema",
+          "label": "Schema",
+          "type": "text",
+          "required": false,
+          "placeholder": "main",
+          "order": 3
+        }
+      ],
+      "SSL_Fields": []
+    },
+    "MariaDB": {
+      "DB_Vendor_Name": "MariaDB",
+      "JDBC_URL_Template": "jdbc:mariadb://{host}:{port}/{database}",
+      "Connected_By_Options": ["Host-based connection", "JDBC URL connection"],
+      "Default_Connected_By": "Host-based connection",
+      "Fields": [
+        {
+          "name": "Name",
+          "label": "Connection Name",
+          "type": "text",
+          "required": true,
+          "placeholder": "Enter connection name",
+          "order": 1
+        },
+        {
+          "name": "Host",
+          "label": "Host",
+          "type": "text",
+          "required": true,
+          "placeholder": "127.0.0.1",
+          "disabled_when": "JDBC URL connection",
+          "order": 2
+        },
+        {
+          "name": "Port",
+          "label": "Port",
+          "type": "number",
+          "required": true,
+          "placeholder": "3306",
+          "disabled_when": "JDBC URL connection",
+          "order": 3
+        },
+        {
+          "name": "Database",
+          "label": "Database",
+          "type": "text",
+          "required": true,
+          "placeholder": "Database name",
+          "disabled_when": "JDBC URL connection",
+          "order": 4
+        },
+        {
+          "name": "Schema",
+          "label": "Schema",
+          "type": "text",
+          "required": false,
+          "placeholder": "Schema (optional)",
+          "order": 5
+        },
+        {
+          "name": "Authentication_Type",
+          "label": "Authentication Type",
+          "type": "dropdown",
+          "required": true,
+          "options": ["MariaDB Native Authentication"],
+          "default": "MariaDB Native Authentication",
+          "order": 6
+        },
+        {
+          "name": "Username",
+          "label": "Username",
+          "type": "text",
+          "required": true,
+          "placeholder": "Username",
+          "order": 7
+        },
+        {
+          "name": "Password",
+          "label": "Password",
+          "type": "password",
+          "required": false,
+          "placeholder": "Enter password",
+          "order": 8
+        }
+      ],
+      "SSL_Fields": [
+        {
+          "name": "SSL_Mode",
+          "label": "SSL Mode",
+          "type": "dropdown",
+          "required": false,
+          "options": ["require", "VERIFY_IDENTITY", "verify-ca", "prefer"],
+          "default": "require"
+        },
+        {
+          "name": "ssl_ca",
+          "label": "CA Certificate",
+          "type": "file",
+          "required": false,
+          "placeholder": "Select CA certificate file"
+        },
+        {
+          "name": "ssl_cert",
+          "label": "Client Certificate",
+          "type": "file",
+          "required": false,
+          "placeholder": "Select client certificate file"
+        },
+        {
+          "name": "ssl_key",
+          "label": "Client Key",
+          "type": "file",
+          "required": false,
+          "placeholder": "Select client key file"
+        }
+      ]
+    },
+    "Snowflake": {
+      "DB_Vendor_Name": "Snowflake",
+      "JDBC_URL_Template": "jdbc:snowflake://{host}/{database}",
+      "Connected_By_Options": ["Host-based connection", "JDBC URL connection"],
+      "Default_Connected_By": "Host-based connection",
+      "Fields": [
+        {
+          "name": "Name",
+          "label": "Connection Name",
+          "type": "text",
+          "required": true,
+          "placeholder": "Enter connection name",
+          "order": 1
+        },
+        {
+          "name": "Host",
+          "label": "Account Identifier",
+          "type": "text",
+          "required": true,
+          "placeholder": "<account>.snowflakecomputing.com",
+          "disabled_when": "JDBC URL connection",
+          "order": 2
+        },
+        {
+          "name": "Port",
+          "label": "Port",
+          "type": "number",
+          "required": true,
+          "placeholder": "443",
+          "disabled_when": "JDBC URL connection",
+          "order": 3
+        },
+        {
+          "name": "Database",
+          "label": "Database",
+          "type": "text",
+          "required": true,
+          "placeholder": "Database name",
+          "disabled_when": "JDBC URL connection",
+          "order": 4
+        },
+        {
+          "name": "Schema",
+          "label": "Schema",
+          "type": "text",
+          "required": false,
+          "placeholder": "Schema (optional)",
+          "order": 5
+        },
+        {
+          "name": "Warehouse",
+          "label": "Warehouse",
+          "type": "text",
+          "required": true,
+          "placeholder": "Warehouse name",
+          "order": 6
+        },
+        {
+          "name": "Role",
+          "label": "Role",
+          "type": "text",
+          "required": false,
+          "placeholder": "Role (optional)",
+          "order": 7
+        },
+        {
+          "name": "Authentication_Type",
+          "label": "Authentication Type",
+          "type": "dropdown",
+          "required": true,
+          "options": ["Snowflake Native Authentication"],
+          "default": "Snowflake Native Authentication",
+          "order": 8
+        },
+        {
+          "name": "Username",
+          "label": "Username",
+          "type": "text",
+          "required": true,
+          "placeholder": "Username",
+          "order": 9
+        },
+        {
+          "name": "Password",
+          "label": "Password",
+          "type": "password",
+          "required": false,
+          "placeholder": "Enter password",
+          "order": 10
+        }
+      ],
+      "SSL_Fields": []
+    },
+    "Databricks": {
+      "DB_Vendor_Name": "Databricks",
+      "JDBC_URL_Template": "jdbc:spark://{host}:{port}/{database}",
+      "Connected_By_Options": ["Host-based connection", "JDBC URL connection"],
+      "Default_Connected_By": "Host-based connection",
+      "Fields": [
+        {
+          "name": "Name",
+          "label": "Connection Name",
+          "type": "text",
+          "required": true,
+          "placeholder": "Enter connection name",
+          "order": 1
+        },
+        {
+          "name": "Host",
+          "label": "Workspace Hostname",
+          "type": "text",
+          "required": true,
+          "placeholder": "workspace-hostname",
+          "disabled_when": "JDBC URL connection",
+          "order": 2
+        },
+        {
+          "name": "Port",
+          "label": "Port",
+          "type": "number",
+          "required": true,
+          "placeholder": "443",
+          "disabled_when": "JDBC URL connection",
+          "order": 3
+        },
+        {
+          "name": "Database",
+          "label": "Database",
+          "type": "text",
+          "required": true,
+          "placeholder": "default",
+          "disabled_when": "JDBC URL connection",
+          "order": 4
+        },
+        {
+          "name": "Schema",
+          "label": "Schema",
+          "type": "text",
+          "required": true,
+          "placeholder": "default",
+          "order": 5
+        },
+        {
+          "name": "HTTP_Path",
+          "label": "HTTP Path",
+          "type": "text",
+          "required": true,
+          "placeholder": "/sql/1.0/warehouses/...",
+          "order": 6
+        },
+        {
+          "name": "Username",
+          "label": "Username",
+          "type": "text",
+          "required": true,
+          "placeholder": "token",
+          "order": 7
+        },
+        {
+          "name": "Password",
+          "label": "Personal Access Token",
+          "type": "password",
+          "required": true,
+          "placeholder": "Enter access token",
+          "order": 8
+        }
+      ],
+      "SSL_Fields": []
+    },
+    "Aurora": {
+      "DB_Vendor_Name": "Aurora_MySql",
+      "JDBC_URL_Template": "jdbc:mysql://{host}:{port}/{database}",
+      "Connected_By_Options": ["Host-based connection", "JDBC URL connection"],
+      "Default_Connected_By": "Host-based connection",
+      "Fields": [
+        {
+          "name": "Name",
+          "label": "Connection Name",
+          "type": "text",
+          "required": true,
+          "placeholder": "Enter connection name",
+          "order": 1
+        },
+        {
+          "name": "Host",
+          "label": "Database Endpoint",
+          "type": "text",
+          "required": true,
+          "placeholder": "aurora-cluster.cluster-xxx.region.rds.amazonaws.com",
+          "disabled_when": "JDBC URL connection",
+          "order": 2
+        },
+        {
+          "name": "Port",
+          "label": "Port",
+          "type": "number",
+          "required": true,
+          "placeholder": "3306",
+          "disabled_when": "JDBC URL connection",
+          "order": 3
+        },
+        {
+          "name": "Database",
+          "label": "Database",
+          "type": "text",
+          "required": true,
+          "placeholder": "mysql",
+          "disabled_when": "JDBC URL connection",
+          "order": 4
+        },
+        {
+          "name": "Schema",
+          "label": "Schema",
+          "type": "text",
+          "required": true,
+          "placeholder": "Schema name",
+          "order": 5
+        },
+        {
+          "name": "Authentication_Type",
+          "label": "Authentication Type",
+          "type": "dropdown",
+          "required": true,
+          "options": ["Aurora Native Authentication"],
+          "default": "Aurora Native Authentication",
+          "order": 6
+        },
+        {
+          "name": "Username",
+          "label": "Username",
+          "type": "text",
+          "required": true,
+          "placeholder": "Username",
+          "order": 7
+        },
+        {
+          "name": "Password",
+          "label": "Password",
+          "type": "password",
+          "required": false,
+          "placeholder": "Enter password",
+          "order": 8
+        }
+      ],
+      "SSL_Fields": [
+        {
+          "name": "SSL_Mode",
+          "label": "SSL Mode",
+          "type": "dropdown",
+          "required": false,
+          "options": ["require", "VERIFY_IDENTITY", "verify-ca", "prefer"],
+          "default": "require"
+        },
+        {
+          "name": "ssl_ca",
+          "label": "CA Certificate",
+          "type": "file",
+          "required": false,
+          "placeholder": "Select CA certificate file"
+        },
+        {
+          "name": "ssl_cert",
+          "label": "Client Certificate",
+          "type": "file",
+          "required": false,
+          "placeholder": "Select client certificate file"
+        },
+        {
+          "name": "ssl_key",
+          "label": "Client Key",
+          "type": "file",
+          "required": false,
+          "placeholder": "Select client key file"
+        }
+      ]
+    },
+    "AWS Redshift": {
+      "DB_Vendor_Name": "Redshift",
+      "JDBC_URL_Template": "jdbc:redshift://{host}:{port}/{database}",
+      "Connected_By_Options": ["Host-based connection", "JDBC URL connection"],
+      "Default_Connected_By": "Host-based connection",
+      "Fields": [
+        {
+          "name": "Name",
+          "label": "Connection Name",
+          "type": "text",
+          "required": true,
+          "placeholder": "Enter connection name",
+          "order": 1
+        },
+        {
+          "name": "Host",
+          "label": "Cluster Endpoint",
+          "type": "text",
+          "required": true,
+          "placeholder": "redshift-cluster.xxx.region.redshift.amazonaws.com",
+          "disabled_when": "JDBC URL connection",
+          "order": 2
+        },
+        {
+          "name": "Port",
+          "label": "Port",
+          "type": "number",
+          "required": true,
+          "placeholder": "5439",
+          "disabled_when": "JDBC URL connection",
+          "order": 3
+        },
+        {
+          "name": "Database",
+          "label": "Database",
+          "type": "text",
+          "required": true,
+          "placeholder": "Database name",
+          "disabled_when": "JDBC URL connection",
+          "order": 4
+        },
+        {
+          "name": "Schema",
+          "label": "Schema",
+          "type": "text",
+          "required": true,
+          "placeholder": "public",
+          "order": 5
+        },
+        {
+          "name": "Authentication_Type",
+          "label": "Authentication Type",
+          "type": "dropdown",
+          "required": true,
+          "options": ["AWS Redshift Native Authentication"],
+          "default": "AWS Redshift Native Authentication",
+          "order": 6
+        },
+        {
+          "name": "Username",
+          "label": "Username",
+          "type": "text",
+          "required": true,
+          "placeholder": "Username",
+          "order": 7
+        },
+        {
+          "name": "Password",
+          "label": "Password",
+          "type": "password",
+          "required": false,
+          "placeholder": "Enter password",
+          "order": 8
+        }
+      ],
+      "SSL_Fields": [
+        {
+          "name": "SSL_Mode",
+          "label": "SSL Mode",
+          "type": "dropdown",
+          "required": false,
+          "options": ["require", "verify-full"],
+          "default": "require"
+        },
+        {
+          "name": "SSLRootCert",
+          "label": "CA Certificate",
+          "type": "file",
+          "required": false,
+          "placeholder": "Select CA certificate file"
+        }
+      ]
+    },
+    "DB2": {
+      "DB_Vendor_Name": "DB2 z/OS",
+      "JDBC_URL_Template": "jdbc:db2://{host}:{port}/{database}",
+      "Connected_By_Options": ["Host-based connection", "JDBC URL connection"],
+      "Default_Connected_By": "Host-based connection",
+      "Fields": [
+        {
+          "name": "Name",
+          "label": "Connection Name",
+          "type": "text",
+          "required": true,
+          "placeholder": "Enter connection name",
+          "order": 1
+        },
+        {
+          "name": "Host",
+          "label": "Host",
+          "type": "text",
+          "required": true,
+          "placeholder": "127.0.0.1",
+          "disabled_when": "JDBC URL connection",
+          "order": 2
+        },
+        {
+          "name": "Port",
+          "label": "Port",
+          "type": "number",
+          "required": true,
+          "placeholder": "25000",
+          "disabled_when": "JDBC URL connection",
+          "order": 3
+        },
+        {
+          "name": "Database",
+          "label": "Database",
+          "type": "text",
+          "required": true,
+          "placeholder": "Database name",
+          "disabled_when": "JDBC URL connection",
+          "order": 4
+        },
+        {
+          "name": "Authentication_Type",
+          "label": "Authentication Type",
+          "type": "dropdown",
+          "required": true,
+          "options": ["DB2 Native Authentication"],
+          "default": "DB2 Native Authentication",
+          "order": 5
+        },
+        {
+          "name": "Username",
+          "label": "Username",
+          "type": "text",
+          "required": true,
+          "placeholder": "Username",
+          "order": 6
+        },
+        {
+          "name": "Password",
+          "label": "Password",
+          "type": "password",
+          "required": false,
+          "placeholder": "Enter password",
+          "order": 7
+        }
+      ],
+      "SSL_Fields": []
+    },
+    "SAP HANA": {
+      "DB_Vendor_Name": "SAP_HANA_Cloud",
+      "JDBC_URL_Template": "jdbc:sap://{host}:{port}",
+      "Connected_By_Options": ["Host-based connection", "JDBC URL connection"],
+      "Default_Connected_By": "Host-based connection",
+      "Fields": [
+        {
+          "name": "Name",
+          "label": "Connection Name",
+          "type": "text",
+          "required": true,
+          "placeholder": "Enter connection name",
+          "order": 1
+        },
+        {
+          "name": "Host",
+          "label": "Host ID",
+          "type": "text",
+          "required": true,
+          "placeholder": "host-id",
+          "disabled_when": "JDBC URL connection",
+          "order": 2
+        },
+        {
+          "name": "Port",
+          "label": "Port",
+          "type": "number",
+          "required": true,
+          "placeholder": "443",
+          "disabled_when": "JDBC URL connection",
+          "order": 3
+        },
+        {
+          "name": "Schema",
+          "label": "Schema",
+          "type": "text",
+          "required": false,
+          "placeholder": "DBADMIN",
+          "order": 4
+        },
+        {
+          "name": "Authentication_Type",
+          "label": "Authentication Type",
+          "type": "dropdown",
+          "required": true,
+          "options": ["SAP HANA Native Authentication"],
+          "default": "SAP HANA Native Authentication",
+          "order": 5
+        },
+        {
+          "name": "Username",
+          "label": "Username",
+          "type": "text",
+          "required": true,
+          "placeholder": "Username",
+          "order": 6
+        },
+        {
+          "name": "Password",
+          "label": "Password",
+          "type": "password",
+          "required": false,
+          "placeholder": "Enter password",
+          "order": 7
+        }
+      ],
+      "SSL_Fields": [
+        {
+          "name": "SSL_Mode",
+          "label": "SSL Mode",
+          "type": "readonly",
+          "value": "MUTUAL_AUTH"
+        },
+        {
+          "name": "SSLMode",
+          "label": "SSL Mode",
+          "type": "file",
+          "required": false,
+          "placeholder": "Select SSL mode file"
+        },
+        {
+          "name": "SSLCert",
+          "label": "Client Certificate",
+          "type": "file",
+          "required": false,
+          "placeholder": "Select client certificate file"
+        },
+        {
+          "name": "SSLKey",
+          "label": "Client Key",
+          "type": "file",
+          "required": false,
+          "placeholder": "Select client key file"
+        },
+        {
+          "name": "SSLCA",
+          "label": "CA Certificate",
+          "type": "file",
+          "required": false,
+          "placeholder": "Select CA certificate file"
+        }
+      ]
+    }
+  }
+}
